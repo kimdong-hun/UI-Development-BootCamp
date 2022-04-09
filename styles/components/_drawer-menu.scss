@@ -16,7 +16,7 @@
   }
 
   &.is-open {
-    &.is-commnuity {
+    &.is-community {
       .drawer-menu-content {
         max-height: _calculate-max-content-height($community-length);
       }
