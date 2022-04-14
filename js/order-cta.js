@@ -4,6 +4,11 @@ const [orderCtaBookmarkButton, orderCtaBuyButton] = orderCta.children
 const orderModal = document.querySelector('.order-form-modal')
 const orderModalOverlay = document.querySelector('.overlay')
 
+const floatingOrderForm = document.querySelector('.floating-order-form')
+const floatingOrderFormBookmarkButton = floatingOrderForm.querySelector(
+  '.button-group .bookmark-button'
+)
+
 function openOrderModal() {
   orderModal.classList.add('is-open')
   orderModalOverlay.classList.add('is-active')
@@ -19,22 +24,37 @@ function closeOrderModal() {
 orderModalOverlay.addEventListener('click', closeOrderModal)
 
 function toggleOrderCtaBookmark() {
-  const [icon, countSpan] = this.children
+  const bookmarkButtonIcon = orderCtaBookmarkButton.children[0]
+  const floatingBookmarkButtonIcon = floatingOrderFormBookmarkButton.children[0]
+  const countSpan = orderCtaBookmarkButton.children[1]
+
   const count = Number(countSpan.innerHTML.replaceAll(',', ''))
 
   let newCount = count
-  if (this.classList.contains('is-active')) {
-    icon.setAttribute('class', 'ic-bookmark')
+  if (
+    orderCtaBookmarkButton.classList.contains('is-active') &&
+    floatingOrderFormBookmarkButton.classList.contains('is-active')
+  ) {
+    bookmarkButtonIcon.setAttribute('class', 'ic-bookmark')
+    floatingBookmarkButtonIcon.setAttribute('class', 'ic-bookmark')
+    orderCtaBookmarkButton.classList.remove('is-active')
+    floatingOrderFormBookmarkButton.classList.remove('is-active')
     newCount = newCount - 1
   } else {
-    icon.setAttribute('class', 'ic-bookmark-filled')
+    bookmarkButtonIcon.setAttribute('class', 'ic-bookmark-filled')
+    floatingBookmarkButtonIcon.setAttribute('class', 'ic-bookmark-filled')
+    orderCtaBookmarkButton.classList.add('is-active')
+    floatingOrderFormBookmarkButton.classList.add('is-active')
     newCount = newCount + 1
   }
 
   countSpan.innerHTML = newCount.toLocaleString()
   countSpan.setAttribute('aria-label', `북마크 ${newCount.toLocaleString()}회`)
-
-  this.classList.toggle('is-active')
 }
 
 orderCtaBookmarkButton.addEventListener('click', toggleOrderCtaBookmark)
+
+floatingOrderFormBookmarkButton.addEventListener(
+  'click',
+  toggleOrderCtaBookmark
+)
