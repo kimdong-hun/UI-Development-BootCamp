@@ -1,4 +1,4 @@
-# [내일의 집](https://kimdong-hun.github.io/UI-Development-BootCamp/) (오늘의 집 스토어페이지 UI 클론코딩)
+# [내일의 집](https://kimdong-hun.github.io/ohou.se-store/) (오늘의 집 스토어페이지 UI 클론코딩)
 
 ## 경험한 것
 
@@ -6,6 +6,7 @@
 2. 반복되는 코드를 줄이고 수정을 쉽게 하기 위해 SCSS 사용 (반응형, 컬러, 폰트, 버튼 등)
 3. 시맨틱 마크업으로 의미를 잘 전달하도록 문서를 작성 (header, main, footer, article, section)
 4. 장애를 가진 사용자가 웹 콘텐츠에 더 쉽게 접근할 수 있도록 웹 접근성 고려 (스크린 리더, ARIA)
+5. UI디자인을 구현 및 수정하기 위해 Figma를 활용
 
 goormedu(구름에듀) - [김버그의 UI 개발 부트캠프](https://edu.goorm.io/lecture/25681/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-ui-%EA%B0%9C%EB%B0%9C-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EA%B2%BD%EB%A0%A5%EA%B0%99%EC%9D%80-%EC%8B%A0%EC%9E%85%EC%9C%BC%EB%A1%9C-%EB%A0%88%EB%B2%A8%EC%97%85)
 
