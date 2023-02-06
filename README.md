@@ -1,4 +1,4 @@
-# [내일의 집](https://kimdong-hun.github.io/ohou.se-store/) (오늘의 집 스토어페이지 UI 클론코딩)
+# [내일의 집](https://kimdong-hun.github.io/ohou.se-store/)
 
 ## 경험한 것
 
