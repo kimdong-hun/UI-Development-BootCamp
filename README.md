@@ -1,4 +1,4 @@
-# [내일의 집](https://kimdong-hun.github.io/ohou.se-store/)
+# [배포](https://kimdong-hun.github.io/ohou.se-store/)
 
 ## 경험한 것
 
